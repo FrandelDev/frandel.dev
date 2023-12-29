@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -16,15 +16,15 @@ body{
     color: #fff;
   }
   h3{
-    margin: 25px 0;
     margin-left: 20px;
+    margin-bottom: 25px;
   }
   header{
     display: flex;
     place-items: center;
     justify-content: center;
     width: 100%;
-    height: 100px;
+    height: 95px;
 }
 .logo{
     display: inline-block;
@@ -46,7 +46,7 @@ body{
     flex-direction: column;
     width: 100%;
     opacity: 0;
-    transition: 2s all ease;
+    transition: 1.5s all ease;
 }
   #panels{
     display: block;
@@ -61,14 +61,15 @@ body{
     position: relative;
     display: inline-flex;
     padding-top: 40px;
-    margin: 10px 0;
+    margin-top: 50px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 175px;
-    background-color: #19274A;
-
+    background-color: #1c2a4b;
+    opacity: 0;
+    transition: 1.5s all ease;
 
   }
   #welcome img{
@@ -90,13 +91,57 @@ body{
 #welcome p b{
   color: #5CBBFF;
 }
+
+
 #projects-container{
-  display: block;
-  height: 200px;
+  height: 375px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.project{
+  display: inline-flex;
+  align-items: center;
+  padding-top: 5px;
+  margin: 12px 30px;
+  width: 300px;
+  height: 115px;
+  background-color: #263459;
+  border-radius: 23px;
 }
 
-
-
+.project figure{
+    position: relative;
+  margin: 0 15px;
+  
+}
+.project figure img{
+  width: 107px;
+  height: 92px;
+  object-fit:cover;
+  border-radius: 15px;
+}
+.project figure:hover::before{
+  content: url("../assets/img/eye.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.project .info p{
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 9px;
+}
+.project .info h5{
+  font-family: 'Source Code Pro', monospace;
+}
+#tools svg{
+  margin: 0 3px;
+  width: 16px;
+  height: 16px;
+}
 /* ------------------------------------------------ */
 
 /* ANIMATIONS */

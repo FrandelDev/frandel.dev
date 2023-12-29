@@ -25,3 +25,9 @@
     font-weight: bold;
     font-style: italic;
 }
+@font-face {
+    font-family: 'Cascadia Code';
+    src: url('woff2/CascadiaCode-Light.woff2') format('woff2');
+    font-weight: lighter;
+    font-style: normal;
+}
