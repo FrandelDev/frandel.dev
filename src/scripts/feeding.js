@@ -90,17 +90,42 @@ function filterTools(filter){
         for(let item in obj){
             toolbox.innerHTML += `<div class="svg-container">${obj[item]}</div>`;
         }
+        
     }
     
-    
+
+}
+
+function addSigns(){
+    var elements = Array.from(document.querySelectorAll("#toolbox .svg-container svg"));
+
+elements.forEach(element => {
+
+element.insertAdjacentHTML("beforebegin",`<span class="disabled">${element.getAttribute("title")}</span>`);
+
+});
+
+const names = Array.from(document.querySelectorAll("#toolbox .svg-container span"));
+
+elements.forEach(element => {
+element.addEventListener("click",()=>{
+    names[elements.indexOf(element)].classList.add("activated");
+});
+
+element.addEventListener("mouseout",()=>{
+    names[elements.indexOf(element)].classList.remove("activated");
+});
+});
 }
 
 function addTools(){
        filterTools()
+       addSigns()
     for(let item of filterOptions){
         item.addEventListener("click",()=>{
             currentFilter.textContent = item.textContent;
             filterTools(currentFilter.textContent);
+            addSigns();
         });
     } 
     filterContainer.addEventListener("click", () =>{
@@ -109,27 +134,6 @@ function addTools(){
 
 
 
-    (function addSigns(){
-        var elements = Array.from(document.querySelectorAll("#toolbox .svg-container svg"));
-
-elements.forEach(element => {
-
-    element.insertAdjacentHTML("beforebegin",`<span class="disabled">${element.getAttribute("title")}</span>`);
-    
-});
-
-const names = Array.from(document.querySelectorAll("#toolbox .svg-container span"));
-
-elements.forEach(element => {
-    element.addEventListener("click",()=>{
-        names[elements.indexOf(element)].classList.add("activated");
-    });
-
-    element.addEventListener("mouseout",()=>{
-        names[elements.indexOf(element)].classList.remove("activated");
-    });
-});
-    })()
 }
 
 
