@@ -155,6 +155,7 @@ body{
 }
 #tools-container #filter-container{
      position: relative;
+     z-index: 1;
     align-self: flex-end;
     display: flex;
     align-items: center;
@@ -184,16 +185,31 @@ body{
 }
 #toolbox
 {
+  z-index: 0;
   display: grid;
   grid-template-columns: repeat(4,1fr);  
   place-items: center;
 }
-#toolbox svg{
+#toolbox .svg-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#toolbox .svg-container svg{
   width: 37px;
   height: 37px;
 }
-
-
+#toolbox .svg-container span{
+   position: absolute;
+   left: 2px;
+   top: -27px;
+  padding: 10px;
+  font-size: 9rem;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #313030;
+}
 
 /* ------------------------------------------------ */
 

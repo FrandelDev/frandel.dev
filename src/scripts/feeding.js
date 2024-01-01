@@ -88,7 +88,7 @@ function filterTools(filter){
 
     function renderIcons(obj){
         for(let item in obj){
-            toolbox.innerHTML += obj[item];
+            toolbox.innerHTML += `<div class="svg-container">${obj[item]}</div>`;
         }
     }
     
@@ -99,14 +99,39 @@ function addTools(){
        filterTools()
     for(let item of filterOptions){
         item.addEventListener("click",()=>{
-            currentFilter.innerHTML = item.innerHTML;
-            filterTools(currentFilter.innerHTML);
+            currentFilter.textContent = item.textContent;
+            filterTools(currentFilter.textContent);
         });
     } 
     filterContainer.addEventListener("click", () =>{
         filterOptionsContainer.classList.toggle("activated")
     });
+
+
+
+    (function addSigns(){
+        var elements = Array.from(document.querySelectorAll("#toolbox .svg-container svg"));
+
+elements.forEach(element => {
+
+    element.insertAdjacentHTML("beforebegin",`<span class="disabled">${element.getAttribute("title")}</span>`);
     
+});
+
+const names = Array.from(document.querySelectorAll("#toolbox .svg-container span"));
+
+elements.forEach(element => {
+    element.addEventListener("click",()=>{
+        names[elements.indexOf(element)].classList.add("activated");
+    });
+
+    element.addEventListener("mouseout",()=>{
+        names[elements.indexOf(element)].classList.remove("activated");
+    });
+});
+    })()
 }
+
+
 export {addProjects,addTools};
 
