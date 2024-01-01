@@ -1,5 +1,10 @@
 import logos from "../assets/img/logos-svg.json" assert{type: "json"}
 const container = document.querySelector("#projects-container");
+const currentFilter = document.querySelector("#current-filter");
+const toolbox = document.querySelector("#toolbox");
+const filterContainer = document.querySelector("#filter-container");
+const filterOptionsContainer = document.querySelector("#filter-container-options");
+const filterOptions = document.getElementsByClassName("filter-option");
 
 const projectsData = [
     {
@@ -68,9 +73,40 @@ function addProjects(){
             </div>
         </article>
     `
+    });   
+}
+
+function filterTools(filter){
+    toolbox.innerHTML  = "";
+    switch(filter){
+        case "Software" : renderIcons(logos.software);
+        break;
+        case "OS" : renderIcons(logos.OS);
+        break;
+        default: renderIcons(logos.languages);
+    }
+
+    function renderIcons(obj){
+        for(let item in obj){
+            toolbox.innerHTML += obj[item];
+        }
+    }
+    
+    
+}
+
+function addTools(){
+       filterTools()
+    for(let item of filterOptions){
+        item.addEventListener("click",()=>{
+            currentFilter.innerHTML = item.innerHTML;
+            filterTools(currentFilter.innerHTML);
+        });
+    } 
+    filterContainer.addEventListener("click", () =>{
+        filterOptionsContainer.classList.toggle("activated")
     });
     
-
 }
-export default addProjects();
+export {addProjects,addTools};
 

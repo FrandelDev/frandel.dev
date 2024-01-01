@@ -95,6 +95,7 @@ body{
 
 
 #projects-container{
+  margin-bottom: 30px;
   height: 375px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -140,6 +141,60 @@ body{
   width: 16px;
   height: 16px;
 }
+#tools-container:not(:nth-child(0)){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tools-container #toolbox{
+  width: 300px;
+  height: 150px;
+  background-color: #263459;
+
+}
+#tools-container #filter-container{
+     position: relative;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 5px;
+    margin-bottom: 5px;
+}
+#tools-container #filter-container #filter-container-options{
+  position: absolute;
+  bottom: -125px;
+  background-color: #364778;
+  
+}
+#tools-container #filter-container #filter-container-options .filter-option{
+  padding: 5px;
+  margin-top: 10px;
+  border-bottom: 1px solid #fff;
+}
+#tools-container #filter-container #current-filter{
+  font-size: 13rem;
+}
+.disabled{
+  visibility: hidden;
+}
+.activated{
+  visibility: initial;
+}
+#toolbox
+{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);  
+  place-items: center;
+}
+#toolbox svg{
+  width: 37px;
+  height: 37px;
+}
+
+
+
 /* ------------------------------------------------ */
 
 /* ANIMATIONS */
@@ -172,6 +227,9 @@ body{
     margin: 8px 6.5px;
     width: 300px;
   }
+  #tools-container #filter-container{
+    margin-right: 10px;
+}
   }
   @media screen and (min-width: 360px) {
     #panels{
@@ -186,6 +244,9 @@ body{
     .project{
       margin: 8px 30px;
     }
+    #tools-container #filter-container{
+      margin-right: 35px;
+  }
   }
 
   @media screen and (min-width: 400px) {
@@ -198,5 +259,8 @@ body{
       margin: 8px 42px;
       width: 330px;
     }
+    #tools-container #filter-container{
+      margin-right: 60px;
+  }
   }
 

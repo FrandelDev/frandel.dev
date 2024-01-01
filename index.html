@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="src/assets/img/dev.svg" type="image/x-icon">
         <link rel="stylesheet" href="./src/styles/mobile-style.css">
         <link rel="stylesheet" href="./src/styles/fonts/cascadia_code.css">
         <title>Frandel(dev)</title>
@@ -27,21 +28,25 @@
     <h3> # MIS PROYECTOS</h3>
     <section id="projects-container">
     </section>
-    
+
     <h3># MIS HERRAMIENTAS</h3>
     <div id="tools-container">
-        <div class="filter-container">
-            <span class="disabled">
-                <p class="filter-option">Lenguajes</p>
-                <p class="filter-option">OS</p>
-                <p class="filter-option">Software</p>
-            </span>
+        <div id="filter-container">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.25" y="0.75" width="21.5" height="20.5" fill="#354265"/>
+                <rect x="0.25" y="0.75" width="21.5" height="20.5" stroke="white" stroke-width="0.5"/>
+                <path d="M15 7.5H7L10.2 11.1789V13.7222L11.8 14.5V11.1789L15 7.5Z" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             <p id="current-filter">Lenguajes</p>
-
-            <div id="tools">
+            <span id="filter-container-options" class="disabled">
+                <p class="filter-option">Lenguajes</p>
+                <p class="filter-option">Software</p>
+                <p class="filter-option">OS</p>
+            </span>
+        </div>
+            <div id="toolbox">
                 
             </div>
-        </div>
     </div>
 </main>
 <footer></footer>
