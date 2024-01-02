@@ -145,6 +145,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 #tools-container #toolbox{
@@ -211,6 +212,74 @@ body{
   background-color: #313030;
 }
 
+#contact{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  margin-bottom: 30px;
+}
+#contact #contact-form{
+  display: flex;
+  flex-direction: column;
+}
+#contact #contact-form label{
+  display: block;
+  margin-bottom: 25px;
+  padding-left: 15px;
+  font-size: 11rem;
+  background-color: #263459;
+  border-radius: 17px;
+}
+#contact #contact-form label input{
+  height: 35px;
+  background-color: transparent;
+  border: none;
+  caret-color: #fff;
+  color: #fff;
+}
+#contact #contact-form label textarea{
+  width: 95%;
+  height: 80px;
+  padding-top: 10px;
+  border: none;
+  background-color: transparent;
+  caret-color: #fff;
+  color: #fff;
+}
+
+#contact #contact-form label textarea,input:focus{
+  outline: none;
+}
+#contact #contact-form label textarea::placeholder{
+  color: #fff;
+}
+#contact #contact-form #socials{
+  display: flex;
+  justify-content: flex-end;
+}
+#contact #contact-form #socials a svg{
+  width: 24px;
+  height: 24px;
+}
+#contact #contact-form input[type="submit"]{
+  width: 100px;
+  height: 30px;
+  align-self: center;
+  background-color: #148EFF;
+  color: #fff;
+  font-weight: bolder;
+  border: none;
+  border-radius: 15px;
+}
+
+
+footer{
+  height: 50px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 9rem;
+  background-color: #243563;
+}
 /* ------------------------------------------------ */
 
 /* ANIMATIONS */

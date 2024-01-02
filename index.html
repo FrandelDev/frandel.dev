@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./src/styles/fonts/cascadia_code.css">
         <title>Frandel(dev)</title>
        <script type="module"  src="./src/scripts/program.js" defer></script>
+       <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
     <header>
@@ -49,6 +50,25 @@
             </div>
     </section>
 </main>
-<footer></footer>
+    <section id="contact">
+        <h3>CONTACTO</h3>
+        <form id="contact-form">
+            <input type="hidden" name="contact_number">
+            <label>Nombre:
+                <input type="text" name="user_name">
+            </label>
+            <label>E-mail:
+                <input type="email" name="user_email">
+            </label>
+            <label>
+                <textarea name="message" placeholder="Mensaje:"></textarea>
+            </label>
+            <div id="socials"></div>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+<footer>
+    <p id="copyright"><script>copyright.textContent = `Copyright © ${new Date().getFullYear()} frandel.dev - Todos los derechos reservados.`</script></p>
+</footer>
 </body>
 </html>
