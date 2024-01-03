@@ -57,13 +57,13 @@
         <form id="contact-form">
             <input type="hidden" name="contact_number">
             <label>Nombre:
-                <input type="text" name="user_name">
+                <input type="text" name="user_name" required>
             </label>
             <label>E-mail:
-                <input type="email" name="user_email">
+                <input type="email" name="user_email" required>
             </label>
             <label>
-                <textarea name="message" placeholder="Mensaje:"></textarea>
+                <textarea name="message" placeholder="Mensaje:" required></textarea>
             </label>
             <div id="socials"></div>
             <input type="submit" value="Enviar">

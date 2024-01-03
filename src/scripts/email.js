@@ -13,8 +13,11 @@ window.onload = function() {
         emailjs.sendForm('1', 'contact_form', this)
             .then(function() {
                 console.log('SUCCESS!');
+                document.querySelector("#socials").insertAdjacentHTML("beforebegin","<h2 class='status-mail-success'>Mensaje enviado exitosamente</h2>");
+                setTimeout(()=>document.querySelector(".status-mail-success").remove(),5000);
             }, function(error) {
                 console.log('FAILED...', error);
+                document.querySelector("#socials").insertAdjacentHTML("beforebegin","<h6 class='status-mail-error'>Esta función no está disponible por el momento, por favor intente con otro método.</h6>");
             });
             event.target.reset()
     });

@@ -224,8 +224,26 @@ body{
   margin-bottom: 30px;
 }
 #contact #contact-form{
+  position: relative;
   display: flex;
   flex-direction: column;
+}
+.status-mail-error, .status-mail-success{
+position: absolute;
+width: 185px;
+bottom: 70px;
+right: 25px;
+padding: 10px;
+font-size: 12rem;
+text-align: center;
+transition: 0.2s all ease-out;
+}
+.status-mail-success{
+  background-color: #1dc604;
+}
+.status-mail-error{
+  background-color: #db3b3b;
+
 }
 #contact #contact-form label{
   display: block;
@@ -286,11 +304,6 @@ footer{
   background-color: #243563;
 }
 /* ------------------------------------------------ */
-
-/* ANIMATIONS */
-  @keyframes blink-caret {
-    50% { border-color: transparent; }
-  }
 
 /* MEDIA QUERIES */
   @media screen and (min-width: 320px) {
@@ -354,3 +367,8 @@ footer{
   }
   }
 
+
+/* ANIMATIONS */
+  @keyframes blink-caret {
+    50% { border-color: transparent; }
+  }
