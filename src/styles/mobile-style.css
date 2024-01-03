@@ -166,13 +166,14 @@ body{
 }
 #tools-container #filter-container #filter-container-options{
   position: absolute;
-  bottom: -125px;
+  bottom: -170px;
   background-color: #364778;
   
 }
 #tools-container #filter-container #filter-container-options .filter-option{
   padding: 5px;
   margin-top: 10px;
+  font-size: 11rem;
   border-bottom: 1px solid #fff;
 }
 #tools-container #filter-container #current-filter{
@@ -188,8 +189,12 @@ body{
 {
   z-index: 0;
   display: grid;
+  row-gap: 20px;
+  padding-top: 20px;
   grid-template-columns: repeat(4,1fr);  
   place-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 #toolbox .svg-container{
   position: relative;

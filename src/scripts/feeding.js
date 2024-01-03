@@ -83,7 +83,16 @@ function filterTools(filter){
         break;
         case "OS" : renderIcons(logos.OS);
         break;
-        default: renderIcons(logos.languages);
+        case "Lenguajes" : renderIcons(logos.languages);
+        break;
+        case "Frameworks" : renderIcons(logos.frameworks);
+        break;
+        default: {
+            renderIcons(logos.languages);
+            renderIcons(logos.frameworks);
+            renderIcons(logos.software);
+            renderIcons(logos.OS);
+        }
     }
 
     function renderIcons(obj){

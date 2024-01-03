@@ -12,7 +12,7 @@ textarea.addEventListener("mouseleave",function(){
 })
 
 socials.innerHTML += `<a href="mailto:frandelcorporan@gmail.com">${socialsIcons.socials["gmail-icon"]}</a>`;
-socials.innerHTML += `<a href="https://www.linkedin.com/in/frandeldev/">${socialsIcons.socials["linkedin-icon"]}</a>`;
+socials.innerHTML += `<a href="https://www.linkedin.com/in/frandeldev/" target="_blank">${socialsIcons.socials["linkedin-icon"]}</a>`;
 addEmailService();
 }
 export default contactEvents();
