@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
+
+
+:root{
+  --container: #263459;
+}
 *{
     margin: 0;
     padding: 0;
@@ -60,13 +65,13 @@ body{
   #welcome{
     position: relative;
     display: inline-flex;
-    padding-top: 40px;
+    padding-top: 20px;
     margin-top: 50px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 175px;
+    height: 215px;
     background-color: #1c2a4b;
     opacity: 0;
     transition: 1.5s all ease;
@@ -105,7 +110,7 @@ body{
   display: inline-flex;
   align-items: center;
   height: 115px;
-  background-color: #263459;
+  background-color: var(--container);
   border-radius: 23px;
 }
 
@@ -149,10 +154,17 @@ body{
 }
 
 #tools-container #toolbox{
+  z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);  
+  row-gap: 20px;
+  padding: 30px 0;
+  place-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
   width: 300px;
   height: 150px;
-  background-color: #263459;
-
+  background-color: var(--container);
 }
 #tools-container #filter-container{
      position: relative;
@@ -184,17 +196,6 @@ body{
 }
 .activated{
   visibility: initial;
-}
-#toolbox
-{
-  z-index: 0;
-  display: grid;
-  row-gap: 20px;
-  padding-top: 20px;
-  grid-template-columns: repeat(4,1fr);  
-  place-items: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 #toolbox .svg-container{
   position: relative;
@@ -250,7 +251,7 @@ transition: 0.2s all ease-out;
   margin-bottom: 25px;
   padding-left: 15px;
   font-size: 11rem;
-  background-color: #263459;
+  background-color: var(--container);
   border-radius: 17px;
 }
 #contact #contact-form label input{
