@@ -6,7 +6,9 @@ const filterContainer = document.querySelector("#filter-container");
 const filterOptionsContainer = document.querySelector("#filter-container-options");
 const filterOptions = document.getElementsByClassName("filter-option");
 
-const projectsData = [
+
+
+const projectsData = [ // Nuevas props : gellery, shortDescription, LongDescription
     {
         thumbnail: "https://i.postimg.cc/9Xd71KYN/tarker-api.jpg",
         title: "tarker.booking-api ",
@@ -59,6 +61,9 @@ const projectsData = [
         ]
     }
 ]
+
+
+
 function addProjects(){
     projectsData.forEach(project => {
         container.innerHTML += `
@@ -75,6 +80,13 @@ function addProjects(){
     `
     });   
 }
+
+function viewFullDescription(){
+
+}
+
+
+
 
 function filterTools(filter){
     toolbox.innerHTML  = "";
@@ -105,6 +117,9 @@ function filterTools(filter){
 
 }
 
+
+
+
 function addSigns(){
     var elements = Array.from(document.querySelectorAll("#toolbox .svg-container svg"));
 
@@ -126,6 +141,12 @@ element.addEventListener("mouseout",()=>{
 });
 });
 }
+
+
+
+
+
+
 
 function addTools(){
        filterTools()

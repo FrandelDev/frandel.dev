@@ -94,12 +94,13 @@ body{
   font-size: 11rem;
   color: #fff;
 }
-#welcome p b{
+p b{
   color: #5CBBFF;
 }
 
 
 #projects-container{
+
   margin-bottom: 30px;
   height: 375px;
   overflow-y: scroll;
@@ -132,15 +133,102 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.project .info p{
+.project .info p, #project-descriptor #description p{
   margin-bottom: 10px;
   margin-top: 10px;
   font-family: 'Roboto Mono', monospace;
-  font-size: 9px;
+  font-size: 9rem;
 }
-.project .info h5{
+.project .info h5, #project-descriptor #description h5{
   font-family: 'Source Code Pro', monospace;
 }
+
+#project-descriptor{
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.315);
+
+}
+#project-descriptor #close{
+  align-self: flex-end;
+  margin: 15px;
+  width: 24px;
+  height: 24px;
+}
+#project-descriptor #description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+  width: 300px;
+  height: fit-content;
+  background-color: var(--container);
+  border-radius: 30px;
+}
+#project-descriptor #description h5{
+  margin: 10px 0;
+  font-size: 16rem;
+}
+#project-descriptor #description #gallery{
+  padding: 5px 15px;
+  width: 100%;
+  height: 170px;
+  background-color: #131F3F;
+}
+#project-descriptor #description #gallery img{
+  width: 100%;
+  height: 155px;
+  object-fit: contain;
+}
+#project-descriptor #description > p{
+  font-size: 11rem;
+  width: 290px;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+#project-descriptor #description #tools-detail{
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  width: 250px;
+  margin: 15px 0;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 12px;
+}
+#project-descriptor #description #tools-detail .detail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  place-content: center;
+}
+#project-descriptor #description #tools-detail .detail svg{
+width: 24px;
+height: 24px;
+}
+#project-descriptor #description #links{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  width: 90%;
+}
+#project-descriptor #description #links #deploy{
+  padding: 7px;
+  font-size: 11rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #4D7EFF;
+  border-radius: 10px;
+}
+
+
 #tools svg{
   margin: 0 3px;
   width: 16px;

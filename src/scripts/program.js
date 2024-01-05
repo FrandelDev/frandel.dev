@@ -9,3 +9,10 @@ welcomeTransition();
 addProjects();
 addTools();
 
+
+
+const p = document.querySelector(".project");
+
+p.addEventListener("click",()=>{
+    document.querySelector("main").insertAdjacentHTML("afterbegin","<div class='project-descriptor'></div>") 
+})
