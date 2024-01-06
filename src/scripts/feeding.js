@@ -35,6 +35,7 @@ const projectsData = [
             logos.software["figma-icon"]
         ],
         repo: "https://github.com/FrandelDev/frandel.dev",
+        deploy: "https://frandel.dev"
     },
     {
         gallery: ["src/assets/img/default.svg"],
@@ -98,8 +99,7 @@ function addProjects(){
     
     projects.forEach(project => {
         project.addEventListener("click", function viewFullDescription(){
-
-            document.querySelector("main").insertAdjacentHTML("afterbegin",`
+            document.querySelector("#projects-container").insertAdjacentHTML("afterbegin",`
             <div id='project-descriptor'>
                     <img src="./src/assets/img/close.svg"id="close">
                     <div id="description">
@@ -121,17 +121,21 @@ function addProjects(){
                         }
                         </div>
                         <div id="links">
-                            <a id="repo" href="https://github.com/tu_nombre_de_usuario/tu_repositorio" target="_blank">
+                            <a id="repo" href="${projectsData[projects.indexOf(project)].repo}" target="_blank">
                                 <img src="https://img.shields.io/badge/GitHub-Ver%20repositorio-brightgreen" alt="Ver repositorio en GitHub">
                             </a>
-                            <a id="deploy" href="#" target="_blank">Despliegue   
+                            <a id="deploy" href="${projectsData[projects.indexOf(project)].deploy}" target="_blank">Despliegue   
                                 <img src="./src/assets/img/external-link.svg" alt="">
                             </a>
                         </div>
                     </div>
                 </div>
             `);
-        
+        document.querySelector("#project-descriptor").addEventListener("click",removeFullViewDescription);
+
+        function removeFullViewDescription(){
+            document.querySelector("#project-descriptor").remove();
+        }
         });
     });
 }
