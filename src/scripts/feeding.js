@@ -8,57 +8,71 @@ const filterOptions = document.getElementsByClassName("filter-option");
 
 
 
-const projectsData = [ // Nuevas props : gellery, shortDescription, LongDescription
+const projectsData = [
     {
-        thumbnail: "https://i.postimg.cc/9Xd71KYN/tarker-api.jpg",
+        gallery: ["https://i.postimg.cc/9Xd71KYN/tarker-api.jpg"],
         title: "tarker.booking-api ",
-        description: "Una Api Web donde hago uso de  buenas practicas tanto en arquitectura como en escritura.",
+        shortDescription: "Una Api Web donde hago uso de  buenas practicas tanto en arquitectura como en escritura.",
+        LongDescription: "En esta ocasión he desarrollado una API basada en una arquitectura empresarial utilizando el patron <b>CQRS</b>, controlando las excepciones y validando datos de entrada de forma fluida todo pensado en tener una arquitectura limpia y escalable.",
         tools: [
-            logos.languages["dotnet-icon"],
+            logos.frameworks["dotnet-icon"],
             logos.languages["csharp-icon"],
             logos.languages["sql-icon"],
             logos.software["azure-icon"]
-        ]
+        ],
+        repo: "https://github.com/FrandelDev/tarker.booking-api",
+        deploy: "https://tarker-booking-api.azurewebsites.net"
     },
     {
-        thumbnail: "src/assets/img/default.svg",
+        gallery: ["src/assets/img/default.svg"],
         title: "frandel.dev",
-        description: "Gracias a este proyecto puedo presentar acertadamente mi trabajo a los demás.",
+        shortDescription: "Gracias a este proyecto puedo presentar acertadamente mi trabajo a los demás.",
+        LongDescription: "En este proyecto me he enfocado en que sea dinámico y rápido en su navegación permitiendo asi mostrar de manera eficiente mis proyectos personales y herramientas que utilizo sin scrollear demasiado en todo el cuerpo de la pagina de forma que todo el contenido este preciso en su sección especifica lo que brinda un fácil acceso a la misma.",
         tools: [
             logos.languages["js-icon"],
             logos.languages["css-icon"],
             logos.languages["html-icon"],
             logos.software["figma-icon"]
-        ]
+        ],
+        repo: "https://github.com/FrandelDev/frandel.dev",
     },
     {
-        thumbnail: "src/assets/img/default.svg",
+        gallery: ["src/assets/img/default.svg"],
         title: "tmdbPelis",
-        description: "Consumo la api de TMDB para mostrar la cartelera de películas.",
+        shortDescription: "Consumo la api de TMDB para mostrar la cartelera de películas.",
+        LongDescription: "for the future.",
         tools: [
             logos.languages["js-icon"],
             logos.languages["css-icon"],
             logos.languages["html-icon"]
-        ]
+        ],
+        repo: "https://github.com/FrandelDev/tmdbPelis",
+        deploy: "#"
     },
     {
-        thumbnail: "src/assets/img/default.svg",
+        gallery: ["src/assets/img/default.svg"],
         title: "EF-CRUD",
-        description: "",
+        shortDescription: "Una APIREST usando minimal API",
+        LongDescription: "for the future.",
         tools: [
-            logos.languages["dotnet-icon"],
+            logos.frameworks["dotnet-icon"],
             logos.languages["csharp-icon"],
             logos.languages["sql-icon"],
-        ]
+        ],
+        repo: "https://github.com/FrandelDev/dotnet-webapi-crud",
+        deploy: "#"
     },
     {
-        thumbnail: 'src/assets/img/default.svg',
+        gallery: ["src/assets/img/default.svg"],
         title: "E-commerce",
-        description: "",
+        shortDescription: "",
+        LongDescription: "for the future.",
         tools: [
             logos.languages["css-icon"],
             logos.languages["html-icon"]
-        ]
+        ],
+        repo: "https://github.com/FrandelDev/eCommerce",
+        deploy: "#"
     }
 ]
 
@@ -69,21 +83,60 @@ function addProjects(){
         container.innerHTML += `
     <article class="project">
             <figure>
-                <img src="${project.thumbnail}" alt="">
+                <img src="${project.gallery[0]}" alt="">
             </figure>
             <div class="info">
                 <h5>${project.title}</h5>
-            <p>${project.description}</p>
-            <div id="tools">${project.tools.join('')}</div>
+            <p>${project.shortDescription}</p>
+            <div class="tools">${project.tools.join('')}</div>
             </div>
         </article>
     `
     });   
+
+    const projects = Array.from(document.querySelectorAll(".project"));
+    
+    projects.forEach(project => {
+        project.addEventListener("click", function viewFullDescription(){
+
+            document.querySelector("main").insertAdjacentHTML("afterbegin",`
+            <div id='project-descriptor'>
+                    <img src="./src/assets/img/close.svg"id="close">
+                    <div id="description">
+                        <h5>${projectsData[projects.indexOf(project)].title}</h5>
+                        <div id="gallery">
+                            <img src="${projectsData[projects.indexOf(project)].gallery[0]}" alt="">
+                        </div>
+                        <p>${projectsData[projects.indexOf(project)].LongDescription}</p>
+                        <h6>Herramientas utilizadas</h6>
+                        <div id="tools-detail">
+                        ${
+                            projectsData[projects.indexOf(project)].tools.map(tool => {
+                                return `<div class="detail">
+                                    ${tool}
+                                    
+                              <p>${tool.match(/title='(\w+\s?\w+?)'/)[1]}</p>
+                              </div>`
+                            }).join('')
+                        }
+                        </div>
+                        <div id="links">
+                            <a id="repo" href="https://github.com/tu_nombre_de_usuario/tu_repositorio" target="_blank">
+                                <img src="https://img.shields.io/badge/GitHub-Ver%20repositorio-brightgreen" alt="Ver repositorio en GitHub">
+                            </a>
+                            <a id="deploy" href="#" target="_blank">Despliegue   
+                                <img src="./src/assets/img/external-link.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `);
+        
+        });
+    });
 }
 
-function viewFullDescription(){
 
-}
 
 
 
