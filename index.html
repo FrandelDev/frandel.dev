@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="src/assets/img/dev.svg" type="image/x-icon">
         <link rel="stylesheet" href="./src/styles/mobile-style.css">
+        <link rel="stylesheet" href="./src/styles/desktop-tablet-style.css" media="screen and (min-width:760px)">
         <link rel="stylesheet" href="./src/styles/fonts/cascadia_code.css">
         <title>Frandel(dev)</title>
        <script type="module"  src="./src/scripts/program.js" defer></script>
@@ -18,13 +19,19 @@
         <span id="panels"></span>
     </div>
     <main>
-        
-        <section id="welcome">
-            <img src="./src/assets/img/Avatar.png" alt="">
+         <div id="gradient">
+            <div class="gradient-container">
+
+                <img id="code" src="./src/assets/img/cscode.png" alt="" class="disabled">
+                <section id="welcome">
+            <img id="avatar" src="./src/assets/img/Avatar.png" alt="">
             <h5>¡Hola! Soy Frandel Corporan,</h5>
             <br>
             <p>Soy un <b>desarrollador web</b> con habilidades tanto en <b>Front-end</b> como en <b>Back-end</b> con <b>bases solidas</b> en cada rubro, tengo muchas ganas de crecer profesionalmente con proyectos que me desafíen y me permitan seguir aprendiendo.</p>
+            <p class="quote">“El primer paso hacia el éxito es creer en tus habilidades para crear y construir”</p>
         </section>
+    </div>
+    </div>
         
         
         <h3> # MIS PROYECTOS</h3>
@@ -71,6 +78,7 @@
             <input type="submit" value="Enviar">
         </form>
     </section>
+    <p class="quote">Soy un desarrollador en constante aprendizaje, ¡siempre listo para enfrentar el próximo desafío!</p>
 <footer>
     <p id="copyright"><script>copyright.textContent = `Copyright © ${new Date().getFullYear()} frandel.dev - Todos los derechos reservados.`</script></p>
 </footer>

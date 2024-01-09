@@ -57,7 +57,6 @@ body{
     display: block;
     width: 404px;
     height: 300px;
-    background-image: url("../assets/img/panels.svg");
     background-repeat: no-repeat;
     position: relative;
   }
@@ -77,10 +76,12 @@ body{
     transition: 1.5s all ease;
 
   }
+ 
   #welcome img{
     position: absolute;
     top: -55px;
   }
+ 
   #welcome > h5{
     align-self: flex-start;
     margin-left: 10%;
@@ -187,6 +188,9 @@ p b{
   height: 155px;
   object-fit: contain;
 }
+#project-descriptor #description #tools-detail p{
+  padding-right: 0px;
+}
 #project-descriptor #description > p{
   font-size: 11rem;
   width: 290px;
@@ -281,10 +285,10 @@ height: 24px;
   font-size: 13rem;
 }
 .disabled{
-  visibility: hidden;
+  display: none;
 }
 .activated{
-  visibility: initial;
+  display: initial;
 }
 #toolbox .svg-container{
   position: relative;
@@ -385,6 +389,15 @@ transition: 0.2s all ease-out;
   border-radius: 15px;
 }
 
+.quote{
+  font-size: 9rem;
+  font-family: 'Cascadia Code',monospace;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
 
 footer{
   height: 50px;

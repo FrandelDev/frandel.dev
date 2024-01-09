@@ -99,6 +99,7 @@ function addProjects(){
     
     projects.forEach(project => {
         project.addEventListener("click", function viewFullDescription(){
+
             document.querySelector("#projects-container").insertAdjacentHTML("afterbegin",`
             <div id='project-descriptor'>
                     <img src="./src/assets/img/close.svg"id="close">
@@ -132,8 +133,11 @@ function addProjects(){
                 </div>
             `);
         document.querySelector("#project-descriptor").addEventListener("click",removeFullViewDescription);
-
-        function removeFullViewDescription(){
+        document.querySelector("#close").addEventListener("click",removeFullViewDescription)
+        function removeFullViewDescription(event){
+            if (event.target !== event.currentTarget) {
+                return;
+            }
             document.querySelector("#project-descriptor").remove();
         }
         });
