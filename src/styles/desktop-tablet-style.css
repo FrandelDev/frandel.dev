@@ -1,3 +1,37 @@
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+#links{
+  display: inline;
+  margin-right: 50px;
+}
+a {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 11rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+}
+
+a:hover {
+  color: #5CBBFF;
+}
+
+header{
+  position: fixed;
+  justify-content: space-between;
+  z-index: 5;
+  background-color: inherit;
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.40);
+}
+header .logo{
+  font-size: 16rem;
+  margin-left: 50px;
+}
 #panels{
     display: none;
 }
@@ -11,11 +45,12 @@
     z-index: 2;
     width: 750px;
      height: 250px;
-  background: linear-gradient(282deg, rgba(3, 5, 11, 0.70) 69.62%, rgba(71, 71, 71, 0.00) 87.6%);
-  box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.25);
-    align-items: flex-end;
-    padding-top: 0px;
- text-align: right;
+     align-items: flex-end;
+     padding-top: 0px;
+     margin-top: 130px;
+     text-align: right;
+     background: linear-gradient(282deg, rgba(3, 5, 11, 0.70) 69.62%, rgba(71, 71, 71, 0.00) 87.6%);
+     box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.25);
 }
 #welcome h5{
     align-self: flex-end;
