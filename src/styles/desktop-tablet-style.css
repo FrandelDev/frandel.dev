@@ -25,6 +25,7 @@ header{
   position: fixed;
   justify-content: space-between;
   z-index: 5;
+  height: 50px;
   background-color: inherit;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.40);
 }
@@ -85,4 +86,37 @@ header .logo{
       margin-bottom: 0px;
       margin-top: 40px;
       margin-right: 15px;
+  }
+  #projects-container{
+    margin-top: 30px;
+    width: 400px;
+    height: 300px;
+  }
+  #project-descriptor {
+    position: relative;
+  }
+  #project-section-container{
+    display: grid;
+    grid-template-areas: 
+    "projects-container title"
+    "projects-container info"
+    ;
+    gap: 50px;
+    padding: 0 50px;
+  }
+  #project-section-container div{
+  
+  }
+  #project-section-container h3{
+    display: none;
+  }
+  #project-section-container div h3{
+    display: block;
+    grid-area: title;
+    margin: 60px 0;
+    color: #59b4f6;
+  }
+  #project-section-container div p{
+    display: block;
+    grid-area: info;
   }
