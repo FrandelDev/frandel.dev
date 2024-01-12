@@ -1,10 +1,27 @@
 
-
+:root{
+  --skyblue: #59b4f6
+}
 
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
+  body::-webkit-scrollbar, #projects-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track, #projects-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb, #projects-container::-webkit-scrollbar-thumb {
+    background-color: var(--skyblue); 
+    border-radius: 20px; 
+   
+}
+
 #links{
   display: inline;
   margin-right: 50px;
@@ -18,7 +35,7 @@ a {
 }
 
 a:hover {
-  color: #5CBBFF;
+  color: var(--skyblue);
 }
 
 header{
@@ -95,6 +112,7 @@ header .logo{
   #project-descriptor {
     position: relative;
   }
+
   #project-section-container{
     display: grid;
     grid-template-areas: 
@@ -104,9 +122,6 @@ header .logo{
     gap: 50px;
     padding: 0 50px;
   }
-  #project-section-container div{
-  
-  }
   #project-section-container h3{
     display: none;
   }
@@ -114,9 +129,26 @@ header .logo{
     display: block;
     grid-area: title;
     margin: 60px 0;
-    color: #59b4f6;
+    color: var(--skyblue);
   }
   #project-section-container div p{
     display: block;
     grid-area: info;
+  }
+
+
+
+
+  /* MIDDLEWARES */
+
+  @media screen and (min-width: 1440px) {
+    #project-section-container{
+    padding: 0 205px;
+    }
+  }
+
+  @media screen and (min-width: 2560px) {
+    #project-section-container{
+      padding: 0 755px;
+    }
   }
