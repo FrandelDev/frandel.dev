@@ -8,15 +8,15 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-  body::-webkit-scrollbar, #projects-container::-webkit-scrollbar {
+  body::-webkit-scrollbar, #projects-container::-webkit-scrollbar, #toolbox::-webkit-scrollbar {
     width: 5px;
 }
 
-body::-webkit-scrollbar-track, #projects-container::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track, #projects-container::-webkit-scrollbar-track, #toolbox::-webkit-scrollbar-track {
     background: transparent;
 }
 
-body::-webkit-scrollbar-thumb, #projects-container::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb, #projects-container::-webkit-scrollbar-thumb, #toolbox::-webkit-scrollbar-thumb {
     background-color: var(--skyblue); 
     border-radius: 20px; 
    
@@ -53,7 +53,7 @@ header .logo{
 #panels{
     display: none;
 }
-#gradient{
+#welcome-section-container{
     position: relative;
      display: flex;
      width: 100%;
@@ -87,7 +87,7 @@ header .logo{
     right: 15px;
   }
   
-  #gradient #code{
+  #welcome-section-container #code{
     position: absolute;
     z-index: 0;
     bottom: 0px;
@@ -105,12 +105,41 @@ header .logo{
       margin-right: 15px;
   }
   #projects-container{
-    margin-top: 30px;
+    margin-top: 40px;
     width: 400px;
     height: 300px;
   }
   #project-descriptor {
-    position: relative;
+    top: 370px;
+    width: 400px;
+    height: fit-content;
+    padding-bottom: 20px;
+  }
+  #project-descriptor #close{
+    margin: 0 15px 0 0;
+  }
+  #project-descriptor #description h5{
+    font-size: 11rem;
+  }
+  #project-descriptor #description #links{
+    margin-left: 50px;
+    margin-top: 0px;
+    width: 85%;
+    font-weight: bolder;
+  }
+  #project-descriptor #description #gallery{
+    height: 137px;
+  }
+  #project-descriptor #description #gallery img{
+    height: 125px;
+  }
+  #project-descriptor #description>p{
+    margin-bottom: 10px;
+    font-size: 9rem;
+  }
+  #project-descriptor #description #tools-detail {
+    overflow-x: hidden;
+    margin-bottom: 5px;
   }
 
   #project-section-container{
@@ -137,8 +166,20 @@ header .logo{
   }
 
 
-
-
+  #tools-section-container{
+    display: flex;
+    justify-content: center;
+    column-gap: 65px;
+    margin-left: -100px;
+    padding-top: 15px
+  }
+  #tools-section-container h3{
+    margin: 15px 0 10px;
+    color: var(--skyblue);
+  }
+  #tools-container #filter-container {
+    margin-right: 5px;
+}
   /* MIDDLEWARES */
 
   @media screen and (min-width: 1440px) {
