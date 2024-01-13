@@ -105,7 +105,7 @@ header .logo{
       margin-right: 15px;
   }
   #projects-container{
-    margin-top: 40px;
+    margin-top: 60px;
     width: 400px;
     height: 300px;
   }
@@ -148,7 +148,7 @@ header .logo{
     "projects-container title"
     "projects-container info"
     ;
-    gap: 50px;
+    column-gap: 50px;
     padding: 0 50px;
   }
   #project-section-container h3{
@@ -165,21 +165,45 @@ header .logo{
     grid-area: info;
   }
 
-
   #tools-section-container{
-    display: flex;
-    justify-content: center;
-    column-gap: 65px;
-    margin-left: -100px;
-    padding-top: 15px
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 70px;
+    padding: 70px;
+    margin-bottom: 50px;
   }
-  #tools-section-container h3{
-    margin: 15px 0 10px;
+  #tools-section-container div{
+    justify-self: flex-end;
+  }
+
+  #tools-section-container div h3{
+    margin-bottom: 70px;
+    text-align: end;
     color: var(--skyblue);
   }
+  #tools-section-container div p{
+    display: flex;
+    max-width: 500px;
+    text-align: right;
+  }
+  #tools-container{
+    width: max-content;
+  }
+  #tools-container #toolbox{
+    padding-right: 20px;
+  } 
   #tools-container #filter-container {
     margin-right: 5px;
 }
+
+#tools-container #filter-container #filter-container-options {
+  bottom: -170px;
+}
+
+
+
+
+
   /* MIDDLEWARES */
 
   @media screen and (min-width: 1440px) {
@@ -193,3 +217,33 @@ header .logo{
       padding: 0 755px;
     }
   }
+
+
+
+
+
+  @media screen and (min-width: 760px){
+    #tools-section-container{
+      padding-right: 0px;
+
+    }
+  } 
+
+    @media screen and (min-width: 1024px){
+    #tools-section-container{
+      padding-right: 200px;
+
+    }
+  }
+  /*
+  @media screen and (min-width: 1440px){
+    #tools-section-container{
+      margin-left: 430px;
+
+    }
+  }
+  @media screen and (min-width: 2560px){
+    #tools-section-container{
+      margin-left: 420px;
+    }
+  } */
