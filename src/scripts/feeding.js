@@ -27,7 +27,7 @@ const projectsData = [
         gallery: ["src/assets/img/default.svg"],
         title: "frandel.dev",
         shortDescription: "Gracias a este proyecto puedo presentar acertadamente mi trabajo a los demás.",
-        LongDescription: "En este proyecto me he enfocado en que sea dinámico y rápido en su navegación permitiendo asi mostrar de manera eficiente mis proyectos personales y herramientas que utilizo sin scrollear demasiado en todo el cuerpo de la pagina de forma que todo el contenido este preciso en su sección especifica lo que brinda un fácil acceso a la misma.",
+        LongDescription: "En este proyecto me he enfocado en que sea simple, dinámico y rápido en su navegación permitiendo asi mostrar de manera eficiente mis proyectos personales y herramientas que utilizo sin scrollear demasiado en todo el cuerpo de la página de forma que todo el contenido este preciso en su sección específica lo que brinda un fácil acceso al mismo",
         tools: [
             logos.languages["js-icon"],
             logos.languages["css-icon"],
