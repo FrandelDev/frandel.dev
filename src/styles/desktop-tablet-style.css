@@ -1,5 +1,4 @@
-
-:root{
+:root {
   --skyblue: #59b4f6
 }
 
@@ -8,24 +7,32 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-  body::-webkit-scrollbar, #projects-container::-webkit-scrollbar, #toolbox::-webkit-scrollbar {
-    width: 5px;
+
+body::-webkit-scrollbar,
+#projects-container::-webkit-scrollbar,
+#toolbox::-webkit-scrollbar {
+  width: 5px;
 }
 
-body::-webkit-scrollbar-track, #projects-container::-webkit-scrollbar-track, #toolbox::-webkit-scrollbar-track {
-    background: transparent;
+body::-webkit-scrollbar-track,
+#projects-container::-webkit-scrollbar-track,
+#toolbox::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-body::-webkit-scrollbar-thumb, #projects-container::-webkit-scrollbar-thumb, #toolbox::-webkit-scrollbar-thumb {
-    background-color: var(--skyblue); 
-    border-radius: 20px; 
-   
+body::-webkit-scrollbar-thumb,
+#projects-container::-webkit-scrollbar-thumb,
+#toolbox::-webkit-scrollbar-thumb {
+  background-color: var(--skyblue);
+  border-radius: 20px;
+
 }
 
-#links{
+#links {
   display: inline;
   margin-right: 50px;
 }
+
 a {
   font-family: 'Source Code Pro', monospace;
   font-size: 11rem;
@@ -38,7 +45,7 @@ a:hover {
   color: var(--skyblue);
 }
 
-header{
+header {
   position: fixed;
   justify-content: space-between;
   z-index: 5;
@@ -47,212 +54,312 @@ header{
   background-color: inherit;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.40);
 }
-header .logo{
+
+header .logo {
   font-size: 18rem;
   margin-left: 50px;
 }
-header #links a{
+
+header #links a {
   font-size: 12rem;
 
 }
-#panels{
-    display: none;
-}
-#welcome-section-container{
-    position: relative;
-     display: flex;
-     width: 100%;
-     justify-content: center;
-}
-#welcome{
-    z-index: 2;
-    width: 750px;
-     height: 250px;
-     align-items: flex-end;
-     padding-top: 0px;
-     margin-top: 130px;
-     text-align: right;
-     background: linear-gradient(282deg, rgba(3, 5, 11, 0.70) 69.62%, rgba(71, 71, 71, 0.00) 87.6%);
-     box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.25);
-}
-#welcome h5{
-    align-self: flex-end;
-    margin-right: 115px;
-    width: fit-content;
-    font-size: 16rem;
-  }
-  #welcome > p{
-    width: 60%;
-    font-size: 14rem;
-  }
-  #welcome > p{
-    margin-right: 100px;
-  }
-  #welcome #avatar{
-    width: 90px;
-    position: absolute;
-    top: 65px;
-    right: 15px;
-  }
-  
-  #welcome-section-container #code{
-    position: absolute;
-    z-index: 0;
-    bottom: 0px;
-    display: inline;
-    height: 250px;
-    opacity: 0;
-    transition: 1.5s all ease;
-  }
 
-  #welcome .quote{
-    font-size: 10rem;
-      padding: 0px;
-      margin-bottom: 0px;
-      margin-top: 40px;
-      width: fit-content;
-      margin-right: 15px;
-  }
-  #projects-container{
-    margin-top: 60px;
-    width: 400px;
-    height: 300px;
-  }
-  #project-descriptor {
-    top: 370px;
-    width: 400px;
-    height: fit-content;
-    padding-bottom: 20px;
-  }
-  #project-descriptor #close{
-    margin: 0 15px 0 0;
-  }
-  #project-descriptor #description h5{
-    font-size: 11rem;
-  }
-  #project-descriptor #description #links{
-    margin-left: 50px;
-    margin-top: 0px;
-    width: 85%;
-    font-weight: bolder;
-  }
-  #project-descriptor #description #gallery{
-    height: 137px;
-  }
-  #project-descriptor #description #gallery img{
-    height: 125px;
-  }
-  #project-descriptor #description>p{
-    margin-bottom: 10px;
-    font-size: 9rem;
-  }
-  #project-descriptor #description #tools-detail {
-    overflow-x: hidden;
-    margin-bottom: 5px;
-  }
+#panels {
+  display: none;
+}
 
-  #project-section-container{
-    display: grid;
-    grid-template-areas: 
+#welcome-section-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#welcome {
+  z-index: 2;
+  width: 750px;
+  height: 250px;
+  align-items: flex-end;
+  padding-top: 0px;
+  margin-top: 130px;
+  text-align: right;
+  background: linear-gradient(282deg, rgba(3, 5, 11, 1.0) 69.62%, rgba(71, 71, 71, 0.00) 87.6%);
+  box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.25);
+}
+
+#welcome h5 {
+  align-self: flex-end;
+  margin-right: 115px;
+  width: fit-content;
+  font-size: 16rem;
+}
+
+#welcome>p {
+  width: 60%;
+  font-size: 14rem;
+}
+
+#welcome>p {
+  margin-right: 100px;
+}
+
+#welcome #avatar {
+  width: 90px;
+  position: absolute;
+  top: 65px;
+  right: 15px;
+}
+
+#welcome-section-container #code {
+  position: absolute;
+  z-index: 0;
+  bottom: 0px;
+  display: inline;
+  height: 250px;
+  opacity: 0;
+  transition: 1.5s all ease;
+}
+
+#welcome .quote {
+  font-size: 10rem;
+  padding: 0px;
+  margin-bottom: 0px;
+  margin-top: 40px;
+  width: fit-content;
+  margin-right: 15px;
+}
+
+#projects-container {
+  margin-top: 60px;
+  width: 400px;
+  height: 300px;
+}
+
+#project-descriptor {
+  top: 370px;
+  width: 400px;
+  height: fit-content;
+  padding-bottom: 20px;
+}
+
+#project-descriptor #close {
+  margin: 0 15px 0 0;
+}
+
+#project-descriptor #description h5 {
+  font-size: 11rem;
+}
+
+#project-descriptor #description #links {
+  margin-left: 50px;
+  margin-top: 0px;
+  width: 85%;
+  font-weight: bolder;
+}
+
+#project-descriptor #description #gallery {
+  height: 137px;
+}
+
+#project-descriptor #description #gallery img {
+  height: 125px;
+}
+
+#project-descriptor #description>p {
+  margin-bottom: 10px;
+  font-size: 9rem;
+}
+
+#project-descriptor #description #tools-detail {
+  overflow-x: hidden;
+  margin-bottom: 5px;
+}
+
+#project-section-container {
+  display: grid;
+  grid-template-areas:
     "projects-container title"
     "projects-container info"
-    ;
-    column-gap: 50px;
-    padding: 0 50px;
-  }
-  #project-section-container h3{
-    display: none;
-  }
-  #project-section-container div h3{
-    display: block;
-    grid-area: title;
-    margin: 60px 0;
-    color: var(--skyblue);
-  }
-  #project-section-container div p{
-    display: block;
-    grid-area: info;
-  }
+  ;
+  column-gap: 50px;
+  padding: 0 50px;
+}
 
-  #tools-section-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 70px;
-    padding: 70px;
-    margin-bottom: 50px;
-  }
-  #tools-section-container div{
-    justify-self: flex-end;
-  }
+#project-section-container h3 {
+  display: none;
+}
 
-  #tools-section-container div h3{
-    margin-bottom: 70px;
-    text-align: end;
-    color: var(--skyblue);
-  }
-  #tools-section-container div p{
-    display: flex;
-    max-width: 500px;
-    text-align: right;
-  }
-  #tools-container{
-    width: max-content;
-  }
-  #tools-container #toolbox{
-    padding-right: 20px;
-  } 
-  #tools-container #filter-container {
-    margin-right: 5px;
+#project-section-container div h3 {
+  display: block;
+  grid-area: title;
+  margin: 60px 0;
+  color: var(--skyblue);
+}
+
+#project-section-container div p {
+  display: block;
+  grid-area: info;
+}
+
+#tools-section-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 70px;
+  padding: 70px;
+  margin-bottom: 50px;
+}
+
+#tools-section-container div {
+  justify-self: flex-end;
+}
+
+#tools-section-container div h3 {
+  margin-bottom: 70px;
+  text-align: end;
+  color: var(--skyblue);
+}
+
+#tools-section-container div p {
+  display: flex;
+  max-width: 500px;
+  text-align: right;
+}
+
+#tools-container {
+  width: max-content;
+  justify-content: center;
+}
+
+#tools-container #toolbox {
+  padding-right: 20px;
+}
+
+#tools-container #filter-container {
+  margin-right: 5px;
 }
 
 #tools-container #filter-container #filter-container-options {
   bottom: -170px;
 }
 
+#contact h3{
+  margin-left: 0;
+}
 
 
+/* MIDDLEWARES */
 
-
-  /* MIDDLEWARES */
-
-  @media screen and (min-width: 1440px) {
-    #project-section-container{
+@media screen and (min-width: 1440px) {
+  #project-section-container {
     padding: 0 205px;
-    }
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  #project-section-container {
+    padding: 0 755px;
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 760px) {
+  #tools-section-container {
+    padding-right: 0px;
+
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #tools-section-container {
+    padding-right: 200px;
+
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    height: 95px;
   }
 
-  @media screen and (min-width: 2560px) {
-    #project-section-container{
-      padding: 0 755px;
-    }
+  header .logo {
+    font-size: 28rem;
   }
 
-
-
-
-
-  @media screen and (min-width: 760px){
-    #tools-section-container{
-      padding-right: 0px;
-
-    }
-  } 
-
-    @media screen and (min-width: 1024px){
-    #tools-section-container{
-      padding-right: 200px;
-
-    }
+  header #links a {
+    font-size: 18rem;
   }
+
+  #welcome {
+    margin-top: 160px;
+    width: 1030px;
+    /* background: linear-gradient(282deg, rgba(3, 5, 11, 1.0) 69.62%, rgba(71, 71, 71, 0.00) 87.6%); */
+  }
+
+  #welcome h5 {
+    font-size: 24rem;
+  }
+
+  #welcome p {
+    width: 75%;
+    font-size: 18rem;
+  }
+
+  #welcome .quote {
+    font-size: 14rem;
+  }
+
+  #project-section-container {
+    padding: 0px 310px;
+  }
+
+  #project-section-container div h3,
+  #tools-section-container div h3 {
+    font-size: 30rem;
+  }
+
+  #project-section-container div p.disabled,
+  #tools-section-container div p.disabled {
+    font-size: 24rem;
+    width: 600px;
+  }
+
+  #tools-section-container {
+    padding-right: 80px;
+    column-gap: 90px;
+  }
+  #contact h3{
+    margin-bottom: 40px;
+    font-size: 30rem;
+  }
+  #contact #contact-form{
+    width: 300px;
+    row-gap: 15px;
+  }
+  #contact #contact-form label{
+    font-size: 14rem;
+  }
+  #contact #contact-form label input{
+    height: 40px;
+  }
+  #contact #contact-form label textarea{
+    font-size: 16rem;
+  }
+  #contact #contact-form #socials a svg{
+    width: 38px;
+    height: 38px;
+  }
+  .quote{
+      font-size: 12rem;
+  }
+}
   /*
-  @media screen and (min-width: 1440px){
-    #tools-section-container{
-      margin-left: 430px;
-
-    }
-  }
   @media screen and (min-width: 2560px){
     #tools-section-container{
       margin-left: 420px;
     }
-  } */
+  }
+  */
