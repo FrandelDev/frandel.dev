@@ -135,7 +135,10 @@ header #links a {
   width: 400px;
   height: 300px;
 }
-
+#projects-container .project:hover{
+  background-color: #31416b;
+  cursor: pointer;
+}
 #project-descriptor {
   top: 370px;
   width: 400px;
@@ -242,7 +245,9 @@ header #links a {
 #tools-container #filter-container #filter-container-options {
   bottom: -170px;
 }
-
+#toolbox .svg-container svg{
+  cursor: pointer;
+}
 #contact h3{
   margin-left: 0;
 }
@@ -275,22 +280,22 @@ header #links a {
 
 @media screen and (min-width: 1024px) {
   #tools-section-container {
-    padding-right: 200px;
+    padding-right: 250px;
 
   }
 }
 
 @media screen and (min-width: 1440px) {
   header {
-    height: 95px;
+    height: 75px;
   }
 
   header .logo {
-    font-size: 28rem;
+    font-size: 24rem;
   }
 
   header #links a {
-    font-size: 18rem;
+    font-size: 12rem;
   }
 
   #welcome {
@@ -348,18 +353,222 @@ header #links a {
   #contact #contact-form label textarea{
     font-size: 16rem;
   }
-  #contact #contact-form #socials a svg{
-    width: 38px;
-    height: 38px;
+  .status-mail-error, .status-mail-success {
+    width: 200px;
+    bottom: 70px;
+    right: 60px;
+    font-size: 14rem;
   }
   .quote{
-      font-size: 12rem;
+    font-size: 14rem;
+    margin: 30px;
   }
+  footer {
+    height: 80px;
+    padding-top: 35px;
+    font-size: 14rem;
 }
-  /*
+  
   @media screen and (min-width: 2560px){
-    #tools-section-container{
-      margin-left: 420px;
+
+    body::-webkit-scrollbar, #projects-container::-webkit-scrollbar, #toolbox::-webkit-scrollbar {
+      width: 10px;
+  }
+
+    header {
+      height: 110px;
+    }
+  
+    header .logo {
+      font-size: 26rem;
+    }
+  
+    header #links a {
+      font-size: 19rem;
+    }
+  
+    #welcome {
+      margin-top: 190px;
+      width: 1900px;
+      height: 500px;
+      /* background: linear-gradient(282deg, rgba(3, 5, 11, 1.0) 69.62%, rgba(71, 71, 71, 0.00) 87.6%); */
+    }
+    #welcome-section-container #code{
+      height: 520px;
+    }
+    #welcome h5 {
+      margin-right: 250px;
+      font-size: 34rem;
+    }
+  
+    #welcome p {
+      margin-right: 250px;
+      width: 70%;
+      font-size: 26rem;
+    }
+    #welcome #avatar {
+      width: 200px;
+      top: 95px;
+      right: 35px;
+  }
+    #welcome .quote {
+      margin-top: 80px;
+      margin-right: 60px;
+      font-size: 20rem;
+    }
+  
+    #project-section-container {
+      margin-top: 100px;
+      padding: 0px 630px;
+      column-gap: 180px;
+    }
+  #projects-container{
+    width: 500px;
+    height: 375px;
+  }
+  #projects-container .project{
+    width: 430px;
+    height: 150px;
+  }
+  #projects-container .project figure{
+    margin: 0 25px;
+  }
+  #projects-container .project figure img{
+    width: 125px;
+    height: 110px;
+  }
+  #projects-container .project .info h5{
+    font-size: 20rem;
+  }
+  #projects-container .project .info p{
+    font-size: 13rem;
+  }
+  #projects-container .project .info .tools svg{
+    width: 24px;
+    height: 24px;
+  }
+  #project-descriptor{
+    top: 700px;
+    left: 618px;
+    width: 575px;
+  }
+  #project-descriptor #close {
+    margin: 20px;
+    width: 38px;
+    height: 38px;
+}
+  #project-descriptor #description{
+    width: 430px;
+  }
+  #project-descriptor #description h5 {
+    font-size: 25rem;
+}
+#project-descriptor #description #gallery {
+  height: 175px;
+}
+#project-descriptor #description #gallery img {
+  height: 170px;
+}
+  #project-descriptor #description>p{
+    margin-bottom: 20px;
+    width: 385px;
+    font-size: 16rem;
+  }
+  #project-descriptor #description h6 {
+    font-size: 18rem;
+}
+#project-descriptor #description #tools-detail .detail svg {
+  width: 32px;
+  height: 32px;
+}
+#project-descriptor #description #tools-detail {
+  margin-bottom: 15px;
+}
+    #project-section-container div h3,
+    #tools-section-container div h3 {
+      font-size: 40rem;
+      
+    }
+  
+    #project-section-container div p.disabled,
+    #tools-section-container div p.disabled {
+      font-size: 34rem;
+      width: 800px;
+    }
+  
+    #tools-section-container {
+      margin-top: 100px;
+      margin-bottom: 110px;
+      padding-right: 200px;
+      column-gap: 200px;
+    }
+    #tools-section-container div p {
+      max-width: 850px;
+  }
+  #tools-container #toolbox {
+    padding-right: 45px;
+    width: 400px;
+    height: 200px;
+}
+#toolbox .svg-container svg {
+  width: 48px;
+  height: 48px;
+}
+#tools-container #filter-container #current-filter {
+  font-size: 18rem;
+}
+#tools-container #filter-container svg {
+  width: 32px;
+  height: 32px;
+}
+#tools-container #filter-container #filter-container-options {
+  bottom: -200px;
+}
+#tools-container #filter-container #filter-container-options .filter-option{
+  font-size: 16rem;
+}
+    #contact h3{
+      margin-bottom: 50px;
+      font-size: 40rem;
+    }
+    #contact #contact-form{
+      width: 400px;
+      row-gap: 20px;
+    }
+    #contact #contact-form label{
+      font-size: 22rem;
+    }
+    #contact #contact-form label input{
+      height: 50px;
+    }
+    #contact #contact-form label textarea{
+      height: 130px;
+      font-size: 22rem;
+    }
+    #contact #contact-form #socials a svg{
+      width: 38px;
+      height: 38px;
+    }
+    #contact #contact-form input[type="submit"] {
+      width: 130px;
+      height: 50px;
+      font-size: 22rem;
+  }
+  .status-mail-error, .status-mail-success {
+    width: 370px;
+    bottom: 122px;
+    right: 15px;
+    font-size: 22rem;
+}
+    .quote{
+        font-size: 18rem;
+        margin: 40px;
+    }
+    
+    footer{
+    height: 153px;
+    padding-top: 66px;
+    font-size: 20rem;
     }
   }
-  */
+}
