@@ -279,11 +279,23 @@ header #links a {
 }
 
 @media screen and (min-width: 1024px) {
-  #tools-section-container {
-    padding-right: 250px;
 
+  #project-section-container{
+    /* column-gap: 0px; */
+    padding: 0 65px;
   }
+  #project-section-container #projects-container{
+    justify-self: end;
+  }
+  #project-section-container div p {
+    max-width: 400px;
 }
+
+#tools-section-container {
+  padding-right: 110px;
+  column-gap: 75px;
+}
+  
 
 @media screen and (min-width: 1440px) {
   header {
@@ -331,7 +343,12 @@ header #links a {
     font-size: 24rem;
     width: 600px;
   }
-
+  #project-section-container div p {
+    max-width: 700px;
+}
+#project-section-container #project-descriptor {
+  top: 400px;
+}
   #tools-section-container {
     padding-right: 80px;
     column-gap: 90px;
@@ -422,10 +439,14 @@ header #links a {
       padding: 0px 630px;
       column-gap: 180px;
     }
+    #project-section-container div p {
+      max-width: 800px;
+  }
   #projects-container{
     width: 500px;
     height: 375px;
   }
+  
   #projects-container .project{
     width: 430px;
     height: 150px;
@@ -571,4 +592,5 @@ header #links a {
     font-size: 20rem;
     }
   }
+}
 }
