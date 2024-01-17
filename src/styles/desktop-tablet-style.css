@@ -281,12 +281,13 @@ header #links a {
 @media screen and (min-width: 1024px) {
 
   #project-section-container{
-    /* column-gap: 0px; */
     padding: 0 65px;
   }
+
   #project-section-container #projects-container{
     justify-self: end;
   }
+
   #project-section-container div p {
     max-width: 400px;
 }
@@ -299,11 +300,11 @@ header #links a {
 
 @media screen and (min-width: 1440px) {
   header {
-    height: 75px;
+    height: 65px;
   }
 
   header .logo {
-    font-size: 24rem;
+    font-size: 18rem;
   }
 
   header #links a {
@@ -313,20 +314,19 @@ header #links a {
   #welcome {
     margin-top: 160px;
     width: 1030px;
-    /* background: linear-gradient(282deg, rgba(3, 5, 11, 1.0) 69.62%, rgba(71, 71, 71, 0.00) 87.6%); */
   }
 
   #welcome h5 {
-    font-size: 24rem;
+    font-size: 18rem;
   }
 
   #welcome p {
     width: 75%;
-    font-size: 18rem;
+    font-size: 16rem;
   }
 
   #welcome .quote {
-    font-size: 14rem;
+    font-size: 13rem;
   }
 
   #project-section-container {
@@ -381,9 +381,9 @@ header #links a {
     margin: 30px;
   }
   footer {
-    height: 80px;
+    height: 70px;
     padding-top: 35px;
-    font-size: 14rem;
+    font-size: 12rem;
 }
   
   @media screen and (min-width: 2560px){
@@ -587,9 +587,9 @@ header #links a {
     }
     
     footer{
-    height: 153px;
-    padding-top: 66px;
-    font-size: 20rem;
+    height: 120px;
+    padding-top: 56px;
+    font-size: 16rem;
     }
   }
 }
