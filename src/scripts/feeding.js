@@ -24,7 +24,7 @@ const projectsData = [
         deploy: "https://tarker-booking-api.azurewebsites.net"
     },
     {
-        gallery: ["src/assets/img/default.svg"],
+        gallery: ["https://i.postimg.cc/WbnJ9ShN/myweb.png"],
         title: "frandel.dev",
         shortDescription: "Gracias a este proyecto puedo presentar acertadamente mi trabajo a los demás.",
         LongDescription: "En este proyecto me he enfocado en que sea simple, dinámico y rápido en su navegación permitiendo asi mostrar de manera eficiente mis proyectos personales y herramientas que utilizo sin scrollear demasiado en todo el cuerpo de la página de forma que todo el contenido este preciso en su sección específica lo que brinda un fácil acceso al mismo",
@@ -38,23 +38,23 @@ const projectsData = [
         deploy: "https://frandel.dev"
     },
     {
-        gallery: ["src/assets/img/default.svg"],
+        gallery: ["https://i.postimg.cc/HnB88TNy/tmdbpelis.jpg"],
         title: "tmdbPelis",
         shortDescription: "Consumo la api de TMDB para mostrar la cartelera de películas.",
-        LongDescription: "for the future.",
+        LongDescription: "Creo una web que permite consultar a la base de datos de TMDB para obtener información sobre películas recientes o mas antiguas permitiendo también hacerlo de forma filtrada y implemento un efecto loading-skeleton para la carga de portadas.",
         tools: [
             logos.languages["js-icon"],
             logos.languages["css-icon"],
             logos.languages["html-icon"]
         ],
         repo: "https://github.com/FrandelDev/tmdbPelis",
-        deploy: "#"
+        deploy: "https://frandeldev.github.io/tmdbPelis/"
     },
     {
         gallery: ["src/assets/img/default.svg"],
         title: "EF-CRUD",
         shortDescription: "Una APIREST usando minimal API",
-        LongDescription: "for the future.",
+        LongDescription: "Esta es una API simple donde utilizo <b>Entity Framework</b> para administrar una base de datos local, creando migraciones, creando un <b>Middleware</b> que da el tiempo y haciendo uso de <b>logger</b>.",
         tools: [
             logos.frameworks["dotnet-icon"],
             logos.languages["csharp-icon"],
@@ -62,19 +62,19 @@ const projectsData = [
         ],
         repo: "https://github.com/FrandelDev/dotnet-webapi-crud",
         deploy: "#"
-    },
-    {
-        gallery: ["src/assets/img/default.svg"],
-        title: "E-commerce",
-        shortDescription: "",
-        LongDescription: "for the future.",
-        tools: [
-            logos.languages["css-icon"],
-            logos.languages["html-icon"]
-        ],
-        repo: "https://github.com/FrandelDev/eCommerce",
-        deploy: "#"
     }
+    // {
+    //     gallery: ["src/assets/img/default.svg"],
+    //     title: "E-commerce",
+    //     shortDescription: "",
+    //     LongDescription: "for the future.",
+    //     tools: [
+    //         logos.languages["css-icon"],
+    //         logos.languages["html-icon"]
+    //     ],
+    //     repo: "https://github.com/FrandelDev/eCommerce",
+    //     deploy: "#"
+    // }
 ]
 
 
@@ -125,9 +125,13 @@ function addProjects(){
                             <a id="repo" href="${projectsData[projects.indexOf(project)].repo}" target="_blank">
                                 <img src="https://img.shields.io/badge/GitHub-Ver%20repositorio-brightgreen" alt="Ver repositorio en GitHub">
                             </a>
-                            <a id="deploy" href="${projectsData[projects.indexOf(project)].deploy}" target="_blank">Despliegue   
-                                <img src="./src/assets/img/external-link.svg" alt="">
-                            </a>
+                            ${
+                                projectsData[projects.indexOf(project)].deploy != "#" 
+                                ? `<a id="deploy" href="${projectsData[projects.indexOf(project)].deploy}" target="_blank">Despliegue   
+                                    <img src="./src/assets/img/external-link.svg" alt="">
+                                </a>` 
+                                : '<p>[sin despliegue]</p>'
+                              }
                         </div>
                     </div>
                 </div>
