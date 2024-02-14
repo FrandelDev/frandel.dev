@@ -27,7 +27,7 @@ const projectsData = [
         gallery: ["https://i.postimg.cc/WbnJ9ShN/myweb.png"],
         title: "frandel.dev",
         shortDescription: "Gracias a este proyecto puedo presentar acertadamente mi trabajo a los demás.",
-        LongDescription: "En este proyecto me he enfocado en que sea simple, dinámico y rápido en su navegación permitiendo asi mostrar de manera eficiente mis proyectos personales y herramientas que utilizo sin scrollear demasiado en todo el cuerpo de la página de forma que todo el contenido este preciso en su sección específica lo que brinda un fácil acceso al mismo",
+        LongDescription: "En este proyecto me he enfocado en que sea simple, dinámico y rápido en su navegación permitiendo así mostrar de manera eficiente mis proyectos personales y herramientas que utilizo sin scrollear demasiado en el cuerpo de la página de forma que todo el contenido este preciso en su sección lo que brinda un fácil acceso al mismo",
         tools: [
             logos.languages["js-icon"],
             logos.languages["css-icon"],
@@ -41,7 +41,7 @@ const projectsData = [
         gallery: ["https://i.postimg.cc/HnB88TNy/tmdbpelis.jpg"],
         title: "tmdbPelis",
         shortDescription: "Consumo la api de TMDB para mostrar la cartelera de películas.",
-        LongDescription: "Creo una web que permite consultar a la base de datos de TMDB para obtener información sobre películas recientes o mas antiguas permitiendo también hacerlo de forma filtrada y implemento un efecto loading-skeleton para la carga de portadas.",
+        LongDescription: "Una web que permite consultar a la base de datos de TMDB para obtener información sobre películas recientes o mas antiguas permitiendo también hacerlo de forma filtrada y implemento un efecto loading-skeleton para la carga de portadas.",
         tools: [
             logos.languages["js-icon"],
             logos.languages["css-icon"],

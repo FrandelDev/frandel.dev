@@ -147,7 +147,7 @@ header #links a {
 }
 
 #project-descriptor #close {
-  margin: 0 15px 0 0;
+  margin: 15px 15px 0 0;
 }
 
 #project-descriptor #description h5 {
@@ -468,7 +468,7 @@ header #links a {
     width: 24px;
     height: 24px;
   }
-  #project-descriptor{
+  #project-section-container #project-descriptor{
     top: 700px;
     left: 618px;
     width: 575px;
@@ -520,7 +520,7 @@ header #links a {
     #tools-section-container {
       margin-top: 100px;
       margin-bottom: 110px;
-      padding-right: 200px;
+      padding-right: 360px;
       column-gap: 200px;
     }
     #tools-section-container div p {
