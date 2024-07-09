@@ -1,4 +1,4 @@
-import socialsIcons from "../assets/img/logos-svg.json";
+import socialsIcons from "../assets/img/logos-svg.json" assert { type: "json" };
 import addEmailService from "./email.js";
 const textarea = document.querySelector('textarea');
 const socials = document.querySelector("#socials");
